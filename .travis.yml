@@ -1,8 +1,9 @@
 language: java
 jdk: oraclejdk8
 dist: precise
+python: 3.5
+os: linux
 
-sudo: required
 services:
   - docker
 env:
