@@ -1,4 +1,4 @@
-docker build -t mrdocker007/test:latest -t mrdocker007/test:$SHA -f ./demo-k8s/Dockerfile ./demo-k8s
+docker build -t mrdocker007/test:latest -t mrdocker007/test:$SHA -f Dockerfile .
 
 docker push mrdocker007/test:latest
 
