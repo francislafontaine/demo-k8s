@@ -14,7 +14,7 @@ os: linux
 
 cache:
   directories:
-    - $HOME/google-cloud-sdk
+#    - $HOME/google-cloud-sdk
     - $HOME/.m2
 
 services:
