@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: cloud-demo
-          image: mrdocker007/test:v3
+          image: mrdocker007/test
           ports:
             - containerPort: 9802
