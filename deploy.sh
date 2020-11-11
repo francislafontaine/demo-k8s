@@ -5,4 +5,4 @@ docker push mrdocker007/test:latest
 docker push mrdocker007/test:$SHA
 
 kubectl apply -f k8s
-kubectl set image deployments/cloud-demo server=mrdocker007/test:$SHA
+kubectl set image deployments/cloud-demo cloud-demo=mrdocker007/test:$SHA
