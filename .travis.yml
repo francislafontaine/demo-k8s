@@ -1,9 +1,12 @@
 language: java
 jdk: oraclejdk8
 dist: trusty
-python:
-  - "3.6"
 os: linux
+
+matrix:
+  include:
+    - python: 3.6
+      dist: trusty
 
 services:
   - docker
