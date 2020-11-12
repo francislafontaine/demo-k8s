@@ -1,3 +1,5 @@
+./mvnw clean install -B
+
 docker build -t mrdocker007/test:latest -t mrdocker007/test:$SHA -f Dockerfile .
 
 docker push mrdocker007/test:latest
