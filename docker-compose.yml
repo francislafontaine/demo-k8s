@@ -1,0 +1,18 @@
+version: "3"
+services:
+  api-database:
+    image: mongo:latest
+    container_name: "api-database"
+    ports:
+      - 27017:27017
+    volumes:
+      # seeding scripts
+      - ./mongo-entrypoint:/docker-entrypoint-initdb.d
+      # named volumes
+      - mongodb:/data/db
+      - mongoconfig:/data/configdb
+
+volumes:
+  # default dir on Ubuntu: /var/lib/docker/volumes
+  mongodb:
+  mongoconfig:

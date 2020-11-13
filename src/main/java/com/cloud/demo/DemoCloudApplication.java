@@ -29,4 +29,5 @@ public class DemoCloudApplication {
                 GET("/"),
                 request -> ok().contentType(MediaType.TEXT_HTML).bodyValue(indexHtml));
     }
+
 }

@@ -1,5 +1,6 @@
 package com.cloud.demo.web;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.BodyInserters;
@@ -7,13 +8,23 @@ import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;
 
 import reactor.core.publisher.Mono;
+import static org.springframework.web.reactive.function.BodyInserters.fromPublisher;
+import static org.springframework.web.reactive.function.server.ServerResponse.*;
 
 @Component
+@RequiredArgsConstructor
 public class HelloHandler {
 
+    private final QuoteRepository repository;
+
     public Mono<ServerResponse> hello(ServerRequest request) {
-        return ServerResponse.ok().contentType(MediaType.TEXT_PLAIN)
-                .body(BodyInserters.fromValue("Bonjour, Cloud V3!"))
+        final Mono<Quote> quote = repository.findById("1");
+
+        return quote
+                .flatMap(p -> ok().contentType(MediaType.TEXT_PLAIN).body(fromPublisher(quote, Quote.class)))
+                .switchIfEmpty(ok().contentType(MediaType.TEXT_PLAIN)
+                        .body(BodyInserters.fromValue("Désolé, aucune pensée du jour!")))
                 .log("Test");
+
     }
 }
