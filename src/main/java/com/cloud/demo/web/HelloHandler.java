@@ -13,7 +13,7 @@ public class HelloHandler {
 
     public Mono<ServerResponse> hello(ServerRequest request) {
         return ServerResponse.ok().contentType(MediaType.TEXT_PLAIN)
-                .body(BodyInserters.fromValue("Bonjour, Cloud V2!"))
+                .body(BodyInserters.fromValue("Bonjour, Cloud V3!"))
                 .log("Test");
     }
 }
