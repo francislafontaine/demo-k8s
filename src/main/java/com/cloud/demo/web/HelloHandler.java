@@ -22,7 +22,7 @@ public class HelloHandler {
         final Mono<Quote> quote = repository.findById("1");
 
         return quote
-                .flatMap(p -> ok().contentType(MediaType.TEXT_HTML).body(fromPublisher(quote, Quote.class)))
+                .flatMap(p -> ok().contentType(MediaType.APPLICATION_JSON).body(fromPublisher(quote, Quote.class)))
                 .switchIfEmpty(ok().contentType(MediaType.TEXT_HTML)
                         .header("Content-Type", "text/html; charset=UTF-8")
                         .body(BodyInserters.fromValue("Désolé, aucune pensée du jour hahaHA!")))
