@@ -27,7 +27,9 @@ public class DemoCloudApplication {
         // Serve static index.html at root, for convenient message publishing.
         return route(
                 GET("/"),
-                request -> ok().contentType(MediaType.TEXT_HTML).bodyValue(indexHtml));
+                request -> ok()
+                        .contentType(MediaType.TEXT_HTML)
+                        .bodyValue(indexHtml));
     }
 
 }
