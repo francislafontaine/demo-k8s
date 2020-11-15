@@ -25,7 +25,7 @@ public class HelloHandler {
                 .flatMap(p -> ok().contentType(MediaType.APPLICATION_JSON).body(fromPublisher(quote, Quote.class)))
                 .switchIfEmpty(ok().contentType(MediaType.TEXT_HTML)
                         .header("Content-Type", "text/html; charset=UTF-8")
-                        .body(BodyInserters.fromValue("Désolé, aucune pensée du jour hahaHA!")))
+                        .body(BodyInserters.fromValue("Désolé, aucune pensée du jour hahaHA V2!")))
                 .log("Test");
 
     }

@@ -1,0 +1,28 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>Welcome</title>
+    <meta charset="utf-8"/>
+    <link href="webjars/bootstrap/4.5.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="demo.css" rel="stylesheet">
+    <script src="webjars/jquery/3.5.1/jquery.min.js"></script>
+    <script src="webjars/bootstrap/4.5.3/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="container">
+
+            <blockquote class="quote-card blue-card">
+                <p>
+                    <span th:text="${appName.quoteLine}">Our App</span>
+                </p>
+
+                <cite>
+                    Lorem
+                </cite>
+            </blockquote>
+
+        </div>
+    </div>
+</div>

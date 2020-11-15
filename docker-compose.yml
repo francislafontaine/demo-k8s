@@ -1,14 +1,12 @@
 version: "3"
 services:
-  api-database:
+  mongo:
     image: mongo:latest
-    container_name: "api-database"
+    container_name: "mongo"
     ports:
       - 27017:27017
     volumes:
-      # seeding scripts
       - ./mongo-entrypoint:/docker-entrypoint-initdb.d
-      # named volumes
       - mongodb:/data/db
       - mongoconfig:/data/configdb
 
