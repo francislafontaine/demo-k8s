@@ -1,9 +1,14 @@
 <html xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
 <head>
-    <title>Welcome</title>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+
+    <title>Demo K8S</title>
+
     <link href="webjars/bootstrap/4.5.3/css/bootstrap.min.css" rel="stylesheet">
     <link href="demo.css" rel="stylesheet">
+
     <script src="webjars/jquery/3.5.1/jquery.min.js"></script>
     <script src="webjars/bootstrap/4.5.3/js/bootstrap.min.js"></script>
 </head>
@@ -15,7 +20,7 @@
 
             <blockquote class="quote-card blue-card">
                 <p>
-                    <span th:text="${appName.quoteLine}">Our App</span>
+                    <span th:text="${quote.quoteLine}"></span>
                 </p>
 
                 <cite>

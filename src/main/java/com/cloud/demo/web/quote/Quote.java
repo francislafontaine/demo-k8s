@@ -1,4 +1,4 @@
-package com.cloud.demo.web;
+package com.cloud.demo.web.quote;
 
 import lombok.Builder;
 import lombok.Data;
@@ -12,6 +12,6 @@ public class Quote {
 
     @Id
     private String id;
-
     private String quoteLine;
+    private String author;
 }
