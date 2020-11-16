@@ -1,6 +1,6 @@
-package com.cloud.demo.web.quote;
+package com.cloud.demo.quote.repository;
 
-import org.springframework.data.mongodb.core.ReactiveMongoTemplate;
+import com.cloud.demo.quote.model.Quote;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,4 +1,4 @@
-package com.cloud.demo.web.quote;
+package com.cloud.demo.quote.model;
 
 import lombok.Builder;
 import lombok.Data;

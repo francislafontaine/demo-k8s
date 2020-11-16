@@ -1,16 +1,16 @@
-package com.cloud.demo.web.quote;
+package com.cloud.demo.quote.controller;
 
+import com.cloud.demo.quote.repository.QuoteRepository;
+import com.cloud.demo.quote.model.Quote;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate;
 import org.springframework.data.mongodb.core.aggregation.Aggregation;
-import org.springframework.data.mongodb.core.aggregation.AggregationResults;
 import org.springframework.data.mongodb.core.aggregation.SampleOperation;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
 
 @Controller
 @RequiredArgsConstructor
