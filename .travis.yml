@@ -28,7 +28,7 @@ before_install:
 script:
   - kubectl version
   - ./mvnw clean install -B
-  - docker build -t mrdocker007/test -f ./quote/Dockerfile ./quote
+  - docker build -t mrdocker007/quote -f ./quote/Dockerfile ./quote
 
 deploy:
   provider: script

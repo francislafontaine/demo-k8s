@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cloud-demo
+  name: quote-deployment
 spec:
   replicas: 1
   selector:
@@ -13,10 +13,7 @@ spec:
         component: server
     spec:
       containers:
-        - name: cloud-demo
-          image: mrdocker007/test
+        - name: quote
+          image: mrdocker007/quote
           ports:
             - containerPort: 9802
-          env:
-            - name: MONGO_URL
-              value: mongodb://mongo:27017/dev
