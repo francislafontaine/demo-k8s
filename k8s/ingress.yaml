@@ -13,5 +13,5 @@ spec:
         paths:
           - path: /
             backend:
-              serviceName: cloud-demo-cluster-ip-service
+              serviceName: quote-cluster-ip-service
               servicePort: 9802
