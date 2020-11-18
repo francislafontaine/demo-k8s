@@ -11,6 +11,5 @@ services:
       - mongoconfig:/data/configdb
 
 volumes:
-  # default dir on Ubuntu: /var/lib/docker/volumes
   mongodb:
   mongoconfig:

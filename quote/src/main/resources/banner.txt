@@ -1,0 +1,8 @@
+${AnsiColor.GREEN}    _____  ______ __  __  ____     _  _____
+${AnsiColor.GREEN}   |  __ \|  ____|  \/  |/ __ \   | |/ / _ \
+${AnsiColor.GREEN}   | |  | | |__  | \  / | |  | |  | ' / (_) |___
+${AnsiColor.GREEN}   | |  | |  __| | |\/| | |  | |  |  < > _ </ __|
+${AnsiColor.GREEN}   | |__| | |____| |  | | |__| |  | . \ (_) \__ \
+${AnsiColor.GREEN}   |_____/|______|_|  |_|\____/   |_|\_\___/|___/
+
+${AnsiColor.BLUE}:: Demo K8s :: Running Spring Boot ${spring-boot.version} ::
