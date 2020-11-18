@@ -24,10 +24,11 @@ before_install:
   - gcloud config set compute/zone us-central1-c
   - gcloud container clusters get-credentials my-first-cluster-1
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - ./mvnw clean package -B
+  - docker build -t mrdocker007/quote-test -f ./quote/Dockerfile ./quote
 
-script:
-  - ./mvnw clean install -B
-  - docker build -t mrdocker007/quote -f ./quote/Dockerfile ./quote
+#script:
+#  -
 
 deploy:
   provider: script
