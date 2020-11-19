@@ -28,7 +28,7 @@ before_install:
 #  - docker build -t mrdocker007/quote-test -f ./quote/Dockerfile ./quote
 
 #script:
-#  - inserer execution de tests d'integration ou autres ici
+#  - inserer execution de tests d'integration ou autres ici via docker run ...
 
 deploy:
   provider: script
