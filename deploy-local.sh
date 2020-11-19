@@ -1,3 +1,1 @@
-SHA=$(git rev-parse HEAD)
-
-./deploy.sh
+SHA=$(git rev-parse HEAD) ./deploy.sh
