@@ -15,7 +15,6 @@ import reactor.core.publisher.Flux;
 @RequiredArgsConstructor
 public class QuoteController {
 
-    private final QuoteRepository repository;
     private final ReactiveMongoTemplate mongoTemplate;
 
     @RequestMapping("/quote")
